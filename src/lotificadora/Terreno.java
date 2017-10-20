@@ -11,7 +11,7 @@ package lotificadora;
  */
 public class Terreno {
     private double largo, ancho, precio;
-
+    private boolean ocupado;
     public Terreno(double largo, double ancho, double precio) {
         this.largo = largo;
         this.ancho = ancho;

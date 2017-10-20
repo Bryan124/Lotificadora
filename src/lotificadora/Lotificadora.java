@@ -1,22 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package lotificadora;
 import java.util.Scanner;
-
-/**
- *
- * @author Juan Zepeda
- */
 public class Lotificadora {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner sc = new Scanner(System.in);
+        Proyecto_Lotificacion obj = new Proyecto_Lotificacion();
+        int op,x,y;
+        
+        do{
+            System.out.println("\n***** Menu Principal *****" + "\nIngrese el numero de su opcion" + "\n1.Venta De Lote" + "\n2.Reporte De Lote" + "\n3.Salir");
+            op = sc.nextInt();
+            switch(op){
+                case 1:
+                    obj.dibujo();
+                    System.out.println("\nIngrese las coordenadas del lote que desea: ");
+                    x = sc.nextInt();
+                    y = sc.nextInt();
+                    obj.VenderTerreno(x,y);
+                    break;
+                case 2:
+                    obj.Reporte();
+                    break;
+            }
+        }while(op == 1 || op == 2);
     }
-    
 }
